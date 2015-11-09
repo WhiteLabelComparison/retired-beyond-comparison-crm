@@ -17,5 +17,10 @@
             "email": "j.read@contactrate.co.uk",
             "role": "Developer"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "CaffeineAddicts\\BeyondWhiteLabelCrm\\": "src"
+        }
+    }
 }
