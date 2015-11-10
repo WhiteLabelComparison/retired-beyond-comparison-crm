@@ -1,4 +1,4 @@
-<?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Crm;
+<?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Models\Crm;
 
 use Illuminate\Database\Eloquent\Model;
 

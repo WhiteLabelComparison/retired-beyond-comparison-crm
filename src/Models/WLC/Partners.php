@@ -1,4 +1,4 @@
-<?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Wlc;
+<?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Models\Wlc;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,5 +16,10 @@ class Partners extends Model
     protected $connection = 'beyond-wlc';
 
     protected $fillable = [];
+
+    public function users()
+    {
+        return $this->hasMany(PartnersUsers::class, 'aff_partner');
+    }
 
 }

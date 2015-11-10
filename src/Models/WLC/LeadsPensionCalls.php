@@ -1,4 +1,4 @@
-<?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Wlc;
+<?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Models\Wlc;
 
 use Illuminate\Database\Eloquent\Model;
 
