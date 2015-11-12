@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Customers extends Model
+class Leads2 extends Model
 {
 
     public $timestamp = false;
@@ -11,10 +11,16 @@ class Customers extends Model
 
     protected $primaryKey = 'id';
 
-    protected $table = 'customers';
+    protected $table = 'leads_2';
 
     protected $connection = 'beyond-crm';
 
     protected $fillable = [];
+
+    public function customer()
+    {
+        return $this->hasOne(Customers::class, 'cUserID', 'UserID');
+    }
+
 
 }

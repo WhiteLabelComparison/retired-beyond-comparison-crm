@@ -17,4 +17,9 @@ class LeadsSurvey extends Model
 
     protected $fillable = [];
 
+    public function customer()
+    {
+        return $this->hasOne(Customers::class, 'cUserID', 'UserID');
+    }
+
 }
