@@ -24,6 +24,6 @@ class LeadsGuarantorCalls extends Model
 
     public function caller()
     {
-        return $this->hasOne(AffiliateUser::class, 'id', 'caller');
+        return $this->belongsTo(AffiliateUser::class, 'caller', 'id');
     }
 }

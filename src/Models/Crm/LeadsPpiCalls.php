@@ -24,7 +24,7 @@ class LeadsPpiCalls extends Model
 
     public function caller()
     {
-        return $this->belongsTo(AffiliateUser::class, 'id', 'caller');
+        return $this->belongsTo(AffiliateUser::class, 'caller', 'id');
     }
 
 }

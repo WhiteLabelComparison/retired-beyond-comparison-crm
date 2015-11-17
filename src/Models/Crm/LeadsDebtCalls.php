@@ -24,7 +24,7 @@ class LeadsDebtCalls extends Model
 
     public function user()
     {
-        return $this->hasOne(AffiliateUser::class, 'id', 'caller');
+        return $this->belongsTo(AffiliateUser::class, 'caller', 'id');
     }
 
 }
