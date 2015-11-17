@@ -24,7 +24,7 @@ class LeadsLogbookCalls extends Model
 
     public function lead()
     {
-        return $this->belongsTo(LeadsLogbook::class, 'UserID', 'lead');
+        return $this->belongsTo(AffiliateUser::class, 'caller', 'id');
     }
 
 }

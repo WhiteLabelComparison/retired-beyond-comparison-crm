@@ -29,7 +29,7 @@ class Leads2 extends Model
 
     public function adviser()
     {
-        return $this->belongsTo(AffiliateUser::class, 'username', 'Adviser');
+        return $this->belongsTo(AffiliateUser::class, 'Adviser', 'username');
     }
 
 
