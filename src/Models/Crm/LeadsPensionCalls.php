@@ -17,4 +17,14 @@ class LeadsPensionCalls extends Model
 
     protected $fillable = [];
 
+    public function lead()
+    {
+        return $this->belongsTo(LeadsPension::class, 'UserID', 'lead');
+    }
+
+    public function caller()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'id', 'caller');
+    }
+
 }

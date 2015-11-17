@@ -17,4 +17,18 @@ class LeadsPayday extends Model
 
     protected $fillable = [];
 
+    public function customer()
+    {
+        return $this->hasOne(Customers::class, 'cUserID', 'UserID');
+    }
+
+    public function notes()
+    {
+        return $this->hasMany(LeadsPaydayCalls::class, 'lead', 'UserID');
+    }
+
+    public function adviser()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'username', 'Adviser');
+    }
 }

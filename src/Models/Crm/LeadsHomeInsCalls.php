@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class LeadsGuarantorCalls extends Model
+class LeadsHomeInsCalls extends Model
 {
 
     public $timestamp = false;
@@ -11,7 +11,7 @@ class LeadsGuarantorCalls extends Model
 
     protected $primaryKey = 'id';
 
-    protected $table = 'leads_guarantor_calls';
+    protected $table = 'leads_home_ins';
 
     protected $connection = 'beyond-crm';
 
@@ -19,11 +19,12 @@ class LeadsGuarantorCalls extends Model
 
     public function lead()
     {
-        return $this->belongsTo(LeadsGuarantor::class, 'UserID', 'lead');
+        return $this->belongsTo(LeadsHomeIns::class, 'UserID', 'lead');
     }
 
     public function caller()
     {
         return $this->hasOne(AffiliateUser::class, 'id', 'caller');
     }
+
 }

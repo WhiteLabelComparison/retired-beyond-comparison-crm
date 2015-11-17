@@ -17,4 +17,14 @@ class LeadsLogbookCalls extends Model
 
     protected $fillable = [];
 
+    public function caller()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'id', 'caller');
+    }
+
+    public function lead()
+    {
+        return $this->belongsTo(LeadsLogbook::class, 'UserID', 'lead');
+    }
+
 }

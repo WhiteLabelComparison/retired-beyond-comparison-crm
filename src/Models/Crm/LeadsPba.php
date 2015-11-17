@@ -17,4 +17,20 @@ class LeadsPba extends Model
 
     protected $fillable = [];
 
+    public function customer()
+    {
+        return $this->hasOne(Customers::class, 'cUserID', 'UserID');
+    }
+
+    public function notes()
+    {
+        return $this->hasMany(LeadsPbaCalls::class, 'lead', 'UserID');
+    }
+
+    public function adviser()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'username', 'Adviser');
+    }
+
+
 }
