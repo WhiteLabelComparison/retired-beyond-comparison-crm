@@ -17,4 +17,13 @@ class LeadsPaydayCalls extends Model
 
     protected $fillable = [];
 
+    public function lead()
+    {
+        return $this->belongsTo(LeadsPayday::class, 'UserID', 'lead');
+    }
+
+    public function caller()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'id', 'caller');
+    }
 }

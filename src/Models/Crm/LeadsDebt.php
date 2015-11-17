@@ -1,5 +1,6 @@
 <?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Models\Crm;
 
+use CaffeineAddicts\BeyondWhiteLabelCrm\Models\Wlc\LeadsDebtCalls;
 use Illuminate\Database\Eloquent\Model;
 
 class LeadsDebt extends Model
@@ -17,4 +18,18 @@ class LeadsDebt extends Model
 
     protected $fillable = [];
 
+    public function customer()
+    {
+        return $this->hasOne(Customers::class, 'cUserID', 'UserID');
+    }
+
+    public function notes()
+    {
+        return $this->hasMany(LeadsDebtCalls::class, 'lead', 'UserID');
+    }
+
+    public function adviser()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'username', 'Adviser');
+    }
 }

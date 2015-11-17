@@ -22,5 +22,15 @@ class Leads2 extends Model
         return $this->hasOne(Customers::class, 'cUserID', 'UserID');
     }
 
+    public function notes()
+    {
+        return $this->hasMany(LeadsCalls::class, 'lead', 'UserID');
+    }
+
+    public function adviser()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'username', 'Adviser');
+    }
+
 
 }

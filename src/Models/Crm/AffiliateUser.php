@@ -34,4 +34,29 @@ class AffiliateUser extends Model
         'passowrd',
     ];
 
+    public function leads2()
+    {
+        return $this->hasMany(Leads2::class, 'Adviser', 'username');
+    }
+
+    public function leadsDebt()
+    {
+        return $this->hasMany(LeadsDebt::class, 'Adviser', 'username');
+    }
+
+    public function leadsFlightReclaim()
+    {
+        return $this->hasMany(LeadsFlightReclaim::class, 'Adviser', 'username');
+    }
+
+    public function leadsGuarantor()
+    {
+        return $this->hasMany(LeadsGuarantor::class, 'Adviser', 'username');
+    }
+
+    public function leadsLogbook()
+    {
+        return $this->hasMany(LeadsLogbook::class, 'Adviser', 'username');
+    }
+
 }

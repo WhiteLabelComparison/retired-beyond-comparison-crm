@@ -17,4 +17,14 @@ class LeadsSurveyCalls extends Model
 
     protected $fillable = [];
 
+    public function lead()
+    {
+        return $this->belongsTo(LeadsSurveyCalls::class, 'UserID', 'lead');
+    }
+
+    public function caller()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'id', 'caller');
+    }
+
 }

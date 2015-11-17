@@ -33,4 +33,9 @@ class Customers extends Model
         return null;
     }
 
+    public function notes()
+    {
+        return $this->hasMany(CustomerNotes::class, 'customer');
+    }
+
 }

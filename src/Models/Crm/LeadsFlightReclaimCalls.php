@@ -17,4 +17,14 @@ class LeadsFlightReclaimCalls extends Model
 
     protected $fillable = [];
 
+    public function lead()
+    {
+        return $this->belongsTo(LeadsFlightReclaim::class, 'UserID', 'lead');
+    }
+
+    public function user()
+    {
+        return $this->hasOne(AffiliateUser::class, 'id', 'caller');
+    }
+
 }

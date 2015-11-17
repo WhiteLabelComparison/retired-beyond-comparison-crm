@@ -17,4 +17,14 @@ class LeadsDebtCalls extends Model
 
     protected $fillable = [];
 
+    public function lead()
+    {
+        return $this->belongsTo(LeadsDebt::class, 'UserID', 'lead');
+    }
+
+    public function user()
+    {
+        return $this->hasOne(AffiliateUser::class, 'id', 'caller');
+    }
+
 }
