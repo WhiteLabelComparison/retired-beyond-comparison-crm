@@ -38,4 +38,16 @@ class Customers extends Model
         return $this->hasMany(CustomerNotes::class, 'customer');
     }
 
+    public function products()
+    {
+        return $this->belongsToMany(CustomerProducts::class, 'cst_prod_match', 'cid', 'pid');
+    }
+
+    public function agent()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'agent', 'id');
+    }
+
+
+
 }

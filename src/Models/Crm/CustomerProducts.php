@@ -17,4 +17,9 @@ class CustomerProducts extends Model
 
     protected $fillable = [];
 
+    public function customers()
+    {
+        return $this->belongsToMany(Customers::class, 'cst_prod_match', 'pid', 'cid');
+    }
+
 }
