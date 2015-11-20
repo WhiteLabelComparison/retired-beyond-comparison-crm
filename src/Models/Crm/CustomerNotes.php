@@ -22,4 +22,9 @@ class CustomerNotes extends Model
         return $this->belongsTo(Customers::class, 'id', 'customer');
     }
 
+    public function agent()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'agent');
+    }
+
 }
