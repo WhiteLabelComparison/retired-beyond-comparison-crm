@@ -22,7 +22,7 @@ class LeadsDebtCalls extends Model
         return $this->belongsTo(LeadsDebt::class, 'UserID', 'lead');
     }
 
-    public function user()
+    public function caller()
     {
         return $this->belongsTo(AffiliateUser::class, 'caller', 'id');
     }

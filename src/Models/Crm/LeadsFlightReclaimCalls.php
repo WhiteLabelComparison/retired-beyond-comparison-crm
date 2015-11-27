@@ -22,7 +22,7 @@ class LeadsFlightReclaimCalls extends Model
         return $this->belongsTo(LeadsFlightReclaim::class, 'UserID', 'lead');
     }
 
-    public function user()
+    public function caller()
     {
         return $this->belongsTo(AffiliateUser::class, 'caller', 'id');
     }
