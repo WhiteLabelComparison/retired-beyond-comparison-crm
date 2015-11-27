@@ -22,7 +22,7 @@ class LeadsFlightReclaim extends Model
         return $this->hasOne(Customers::class, 'cUserID', 'UserID');
     }
 
-    public function note()
+    public function notes()
     {
         return $this->hasMany(LeadsFlightReclaimCalls::class, 'lead', 'UserID');
     }
