@@ -11,7 +11,7 @@ class LeadsHomeInsCalls extends Model
 
     protected $primaryKey = 'id';
 
-    protected $table = 'leads_home_ins';
+    protected $table = 'leads_home_ins_calls';
 
     protected $connection = 'beyond-crm';
 
