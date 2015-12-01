@@ -1,6 +1,5 @@
 <?php namespace CaffeineAddicts\BeyondWhiteLabelCrm\Models\Crm;
 
-use CaffeineAddicts\BeyondWhiteLabelCrm\Models\Wlc\LeadsDebtCalls;
 use Illuminate\Database\Eloquent\Model;
 
 class LeadsDebt extends Model
