@@ -235,7 +235,7 @@ class CustomerProducts extends Model
 
     public function notes()
     {
-        return $this->belongsTo(CustomerProducts::class, 'product');
+        return $this->hasMany(ProductNotes::class, 'product');
     }
 
 }

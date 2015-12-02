@@ -17,4 +17,17 @@ class ProductNotes extends Model
 
     protected $fillable = [];
 
+    public function product()
+    {
+        return $this->belongsTo(CustomerProducts::class, 'product');
+    }
+
+    public function agent()
+    {
+        return $this->belongsTo(AffiliateUser::class, 'agent');
+    }
+
+
+
+
 }

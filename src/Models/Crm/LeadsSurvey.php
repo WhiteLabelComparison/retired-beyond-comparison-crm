@@ -24,7 +24,7 @@ class LeadsSurvey extends Model
 
     public function notes()
     {
-        return $this->hasMany(LeadsSurveyCalls::class, 'lead', 'UserID');
+        return $this->hasMany(LeadsSurveyCalls::class, 'lead_id', 'UserID');
     }
 
     public function adviser()
