@@ -19,7 +19,7 @@ class LeadsSurveyCalls extends Model
 
     public function lead()
     {
-        return $this->belongsTo(LeadsSurveyCalls::class, 'UserID', 'lead');
+        return $this->belongsTo(LeadsSurvey::class, 'UserID', 'lead');
     }
 
     public function caller()
