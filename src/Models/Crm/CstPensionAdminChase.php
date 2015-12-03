@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class CstPaydayAdminChase extends Model
+class CstPensionAdminChase extends Model
 {
 
     public $timestamp = false;
@@ -11,7 +11,7 @@ class CstPaydayAdminChase extends Model
 
     protected $primaryKey = 'id';
 
-    protected $table = 'cst_payday_admin_chase';
+    protected $table = 'cst_pension_admin_chase';
 
     protected $connection = 'beyond-crm';
 

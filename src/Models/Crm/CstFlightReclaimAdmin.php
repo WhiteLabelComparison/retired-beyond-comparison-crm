@@ -73,4 +73,121 @@ class CstFlightReclaimAdmin extends Model
         'Lender_Outcome',
     ];
 
+    public function getStatuses($productId, $createdDate = null)
+    {
+        $statuses = [];
+
+        $statuses[] = [
+            'client_product_id' => $productId,
+            'status_id' => 20,
+            'user_id' => null,
+            'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
+            'updated_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
+        ];
+
+        if($this->ppi_Ltr_Authrty_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 23,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date)),
+            ];
+        }
+
+        if($this->ppi_Ltr_Authrty_date_rec != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 24,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date_rec)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date_rec)),
+            ];
+        }
+
+        // Claim Sent
+        if($this->ppi_SAR_Sent_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 30,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_Sent_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_Sent_date)),
+            ];
+        }
+
+        // Claim Acknowledged
+        if($this->ppi_SAR_ack_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 43,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_ack_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_ack_date)),
+            ];
+        }
+
+        // Legal action taken
+        if($this->ppi_Referred_FOS_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => null, //todo add id
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Referred_FOS_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Referred_FOS_date)),
+            ];
+        }
+
+        // Offer Made
+        if($this->ppi_offer_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 35,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_offer_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_offer_date)),
+            ];
+        }
+
+        // Client got funds
+        if($this->ppi_Funds_by_Client_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 36,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Funds_by_Client_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Funds_by_Client_date)),
+            ];
+        }
+
+        // fee taken
+        if($this->ppi_Date_Fee_Taken != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 37,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Date_Fee_Taken)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Date_Fee_Taken)),
+            ];
+        }
+
+        if($this->ppi_Fee_received_date != '0000-00-00') {
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 38,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
+            ];
+
+            $statuses[] = [
+                'client_product_id' => $productId,
+                'status_id' => 39,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
+            ];
+        }
+    }
+
 }
