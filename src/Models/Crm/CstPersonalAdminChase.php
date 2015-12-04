@@ -269,6 +269,8 @@ class CstPersonalAdminChase extends Model
             ];
         }
 
+        return $statuses;
+
     }
 
 }

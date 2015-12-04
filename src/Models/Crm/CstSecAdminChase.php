@@ -269,6 +269,8 @@ class CstSecAdminChase extends Model
             ];
         }
 
+        return $statuses;
+
     }
 
 }

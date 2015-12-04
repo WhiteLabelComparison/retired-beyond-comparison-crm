@@ -351,6 +351,8 @@ class CstGuarantorAdminChase extends Model
             ];
         }
 
+        return $statuses;
+
     }
 
 }
