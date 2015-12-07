@@ -22,7 +22,6 @@ class CstPpiAdmin extends Model
         $statuses = [];
 
         $statuses[] = [
-            'client_product_id' => $productId,
             'status_id' => 20,
             'user_id' => null,
             'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
@@ -31,7 +30,6 @@ class CstPpiAdmin extends Model
 
         if($this->ppi_Pack_Sent_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 21,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Pack_Sent_date)),
@@ -41,7 +39,6 @@ class CstPpiAdmin extends Model
 
         if($this->ppi_Pack_Rtrnd_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 22,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Pack_Rtrnd_date)),
@@ -51,7 +48,6 @@ class CstPpiAdmin extends Model
 
         if($this->ppi_Ltr_Authrty_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 23,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date)),
@@ -61,7 +57,6 @@ class CstPpiAdmin extends Model
 
         if($this->ppi_Ltr_Authrty_date_rec != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 24,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date_rec)),
@@ -72,7 +67,6 @@ class CstPpiAdmin extends Model
 
         if($this->ppi_SAR_Sent_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 25,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date_rec)),
@@ -82,7 +76,7 @@ class CstPpiAdmin extends Model
 
         if($this->ppi_SAR_ack_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+                
                 'status_id' => 26,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_ack_date)),
@@ -90,9 +84,10 @@ class CstPpiAdmin extends Model
             ];
         }
 
+        // sar fee
         if($this->ppi_cheque_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+                
                 'status_id' => 27,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_cheque_date)),
@@ -105,7 +100,7 @@ class CstPpiAdmin extends Model
             $last = end($statuses);
 
             $statuses[] = [
-                'client_product_id' => $productId,
+                
                 'status_id' => 32,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($last['created_at'])),
@@ -118,7 +113,7 @@ class CstPpiAdmin extends Model
             $last = end($statuses);
 
             $statuses[] = [
-                'client_product_id' => $productId,
+                
                 'status_id' => 31,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($last['created_at'])),
@@ -129,7 +124,7 @@ class CstPpiAdmin extends Model
         if($this->ppi_Claim_Letter_date != '0000-00-00') {
 
             $statuses[] = [
-                'client_product_id' => $productId,
+                
                 'status_id' => 30,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Claim_Letter_date)),
@@ -140,7 +135,7 @@ class CstPpiAdmin extends Model
         if($this->ppi_Referred_FOS_date != '0000-00-00') {
 
             $statuses[] = [
-                'client_product_id' => $productId,
+                
                 'status_id' => 33,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Referred_FOS_date)),
@@ -151,7 +146,6 @@ class CstPpiAdmin extends Model
         if($this->ppi_FOS_ack_date != '0000-00-00') {
 
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 34,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_FOS_ack_date)),
@@ -159,10 +153,10 @@ class CstPpiAdmin extends Model
             ];
         }
 
+        // offer awarded
         if($this->ppi_offer_date != '0000-00-00') {
 
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 35,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_offer_date)),
@@ -171,9 +165,7 @@ class CstPpiAdmin extends Model
         }
 
         if($this->ppi_Funds_by_Client_date != '0000-00-00') {
-
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 36,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Funds_by_Client_date)),
@@ -182,9 +174,7 @@ class CstPpiAdmin extends Model
         }
 
         if($this->ppi_Date_Fee_Taken != '0000-00-00') {
-
             $statuses[] = [
-                'client_product_id' => $productId,
                 'status_id' => 37,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Date_Fee_Taken)),
@@ -195,8 +185,7 @@ class CstPpiAdmin extends Model
         if($this->ppi_Fee_received_date != '0000-00-00') {
 
             $statuses[] = [
-                'client_product_id' => $productId,
-                'status_id' => 38,
+                'status_id' => 39,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
