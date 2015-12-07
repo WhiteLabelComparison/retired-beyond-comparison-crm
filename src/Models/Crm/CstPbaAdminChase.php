@@ -22,7 +22,7 @@ class CstPbaAdminChase extends Model
         $statuses = [];
 
         $statuses[] = [
-            'client_product_id' => $productId,
+
             'status_id' => 20,
             'user_id' => null,
             'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
@@ -31,7 +31,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_Pack_Sent_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 21,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_Pack_Sent_date)),
@@ -41,7 +41,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_Pack_Recd_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 22,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_Pack_Recd_date)),
@@ -51,7 +51,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_Claim_Letter_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 30,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_Claim_Letter_date)),
@@ -61,7 +61,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_Claim_ackd_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 41,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_Claim_Letter_date)),
@@ -71,7 +71,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_sent_FOS_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 33,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_sent_FOS_date)),
@@ -81,7 +81,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_ackd_FOS_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 34,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_ackd_FOS_date)),
@@ -91,8 +91,8 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_date_invoiced != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
-                'status_id' => null, //todo add id
+
+                'status_id' => 37,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_date_invoiced)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->pba_date_invoiced)),
@@ -101,7 +101,7 @@ class CstPbaAdminChase extends Model
 
         if($this->pba_comm_recd_date != '0000-00-00') {
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 38,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_comm_recd_date)),
@@ -110,7 +110,7 @@ class CstPbaAdminChase extends Model
 
             // Claim Complete
             $statuses[] = [
-                'client_product_id' => $productId,
+
                 'status_id' => 39,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_comm_recd_date)),
