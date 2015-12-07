@@ -63,7 +63,7 @@ class CustomerProducts extends Model
             $chase = CstPaydayAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
-        return $chase;
+        return is_null($chase)?[]:$chase;
     }
 
     public function notes()
