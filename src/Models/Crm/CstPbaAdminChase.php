@@ -117,6 +117,8 @@ class CstPbaAdminChase extends Model
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->pba_comm_recd_date)),
             ];
         }
+
+        return $statuses;
     }
 
 }

@@ -351,6 +351,8 @@ class CstLogbookAdminChase extends Model
             ];
         }
 
+        return $statuses;
+
     }
 
 }

@@ -25,7 +25,7 @@ class CustomerProducts extends Model
     public function adminChase($userId)
     {
 
-        $chase = null;
+        $chase = [];
 
         if($this->product == 'ppi_ins') {
             $chase = CstPpiAdmin::where('prod_id', $this->id)->where('UserID', $userId)->first();
@@ -36,34 +36,34 @@ class CustomerProducts extends Model
         }
 
         if($this->product == 'flight_reclaim') {
-            $chase = CstFlightReclaimAdmin::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstFlightReclaimAdmin::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
         if($this->product == 'mort_ins') {
-            $chase = CstMortAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstMortAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
         if($this->product == 'secured_ins') {
-            $chase = CstSecAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstSecAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
         if($this->product == 'personal_ins') {
-            $chase = CstPersonalAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstPersonalAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
         if($this->product == 'logbook_ins') {
-            $chase = CstLogbookAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstLogbookAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
         if($this->product == 'guarantor_ins') {
-            $chase = CstGuarantorAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstGuarantorAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
         if($this->product == 'payday_ins') {
-            $chase = CstPaydayAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->frist();
+            $chase = CstPaydayAdminChase::where('prod_id', $this->id)->where('UserID', $userId)->first();
         }
 
-        return $chase;
+        return is_null($chase)?[]:$chase;
     }
 
     public function notes()

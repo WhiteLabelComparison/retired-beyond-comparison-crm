@@ -188,6 +188,8 @@ class CstFlightReclaimAdmin extends Model
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
             ];
         }
+
+        return $statuses;
     }
 
 }

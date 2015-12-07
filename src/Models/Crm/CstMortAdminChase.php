@@ -357,6 +357,8 @@ class CstMortAdminChase extends Model
             ];
         }
 
+        return $statuses;
+
     }
 
 }
