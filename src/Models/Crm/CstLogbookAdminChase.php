@@ -7,31 +7,7 @@ class CstLogbookAdminChase extends Model
 
     public $timestamp = false;
 
-    protected $dates = [
-        'Date_DIP',
-        'Date_Irrevs',
-        'Date_IDD',
-        'Date_Future_Relship',
-        'Date_Docs_Sent',
-        'Date_Photo_ID',
-        'Date_Utility_Bills',
-        'Date_Payslips',
-        'Date_Accounts',
-        'Date_SA302_Rec',
-        'Date_Bank_Statements',
-        'Date_Mort_Rec',
-        'Date_Pension_Statement',
-        'Date_Full_App',
-        'Date_Land_Reg',
-        'Date_Solicitor_Instrd',
-        'Date_Survey_Instructed',
-        'Date_Suitability_Letter',
-        'Date_Offer_Made',
-        'Date_Offer_Accepted',
-        'Date_Completed',
-        'Date_Broker_Fee_Paid',
-        'Date_Proc_Fee_Paid',
-    ];
+    protected $dates = [];
 
     protected $primaryKey = 'id';
 

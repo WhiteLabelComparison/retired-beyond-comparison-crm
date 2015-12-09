@@ -7,31 +7,7 @@ class CstGuarantorAdminChase extends Model
 
     public $timestamp = false;
 
-    protected $dates = [
-        'Date_DIP',
-        'Date_Fee_Agreed',
-        'Date_Irrevs',
-        'Date_IDD',
-        'Date_KFI',
-        'Date_DPP',
-        'Date_Future_Relship',
-        'Date_Docs_Sent',
-        'Date_Photo_ID',
-        'Date_Utility_Bills',
-        'Date_Payslips',
-        'Date_Accounts',
-        'Date_Bank_Statements',
-        'Date_Mort_Rec',
-        'Date_Pension_Statement',
-        'Date_Full_App',
-        'Date_Solicitor_Instrd',
-        'Date_Survey_Instructed',
-        'Date_Offer_Made',
-        'Date_Offer_Accepted',
-        'Date_Completed',
-        'Date_Broker_Fee_Paid',
-        'Date_Proc_Fee_Paid',
-    ];
+    protected $dates = [];
 
     protected $primaryKey = 'id';
 
