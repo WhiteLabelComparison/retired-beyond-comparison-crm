@@ -34,8 +34,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 49,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_DIP),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_DIP),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_DIP)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_DIP)),
             ];
         }
 
@@ -44,8 +44,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 46,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Fee_Agreed),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Fee_Agreed),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Fee_Agreed)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Fee_Agreed)),
             ];
         }
 
@@ -54,8 +54,8 @@ class CstSecAdminChase extends Model
 //                'client_product_id' => $this->prod_id,
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Irrevs),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Irrevs),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Irrevs)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Irrevs)),
 //            ];
 //        }
 
@@ -64,8 +64,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => null, //todo add real id
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_IDD),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_IDD),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_IDD)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_IDD)),
             ];
         }
 
@@ -74,8 +74,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 48,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_KFI),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_KFI),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_KFI)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_KFI)),
             ];
         }
 
@@ -84,8 +84,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => null, //todo add real id
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_DPP),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_DPP),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_DPP)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_DPP)),
             ];
         }
 
@@ -94,8 +94,8 @@ class CstSecAdminChase extends Model
 //                'client_product_id' => $this->prod_id,
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Future_Relship),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Future_Relship),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Future_Relship)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Future_Relship)),
 //            ];
 //        }
 
@@ -104,8 +104,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 50,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Docs_Sent),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Docs_Sent),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Docs_Sent)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Docs_Sent)),
             ];
         }
 
@@ -114,8 +114,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Photo_ID),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Photo_ID),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Photo_ID)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Photo_ID)),
 //            ];
 //        }
 //
@@ -124,8 +124,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Photo_ID),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Photo_ID),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Photo_ID)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Photo_ID)),
 //            ];
 //        }
 //
@@ -134,8 +134,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Utility_Bills),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Utility_Bills),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Utility_Bills)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Utility_Bills)),
 //            ];
 //        }
 //
@@ -144,8 +144,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Payslips),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Payslips),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Payslips)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Payslips)),
 //            ];
 //        }
 //
@@ -154,8 +154,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Accounts),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Accounts),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Accounts)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Accounts)),
 //            ];
 //        }
 //
@@ -164,8 +164,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Mort_Rec),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Mort_Rec),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Mort_Rec)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Mort_Rec)),
 //            ];
 //        }
 
@@ -174,8 +174,8 @@ class CstSecAdminChase extends Model
 //
 //                'status_id' => null, //todo add real id
 //                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', $this->Date_Pension_Statement),
-//                'updated_at' => date('Y-m-d H:i:s', $this->Date_Pension_Statement),
+//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Pension_Statement)),
+//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Pension_Statement)),
 //            ];
 //        }
 
@@ -184,8 +184,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 51,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Full_App),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Full_App),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
             ];
         }
 
@@ -194,8 +194,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 52,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Full_App),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Full_App),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
             ];
         }
 
@@ -204,8 +204,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 53,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Solicitor_Instrd),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Solicitor_Instrd),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Solicitor_Instrd)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Solicitor_Instrd)),
             ];
         }
 
@@ -214,8 +214,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 54,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Survey_Instructed),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Survey_Instructed),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Survey_Instructed)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Survey_Instructed)),
             ];
         }
 
@@ -224,8 +224,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 55,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Suitability_Letter),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Suitability_Letter),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Suitability_Letter)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Suitability_Letter)),
             ];
         }
 
@@ -234,8 +234,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 56,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Offer_Made),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Offer_Made),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Made)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Made)),
             ];
         }
 
@@ -244,8 +244,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 57,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Offer_Accepted),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Offer_Accepted),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Accepted)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Accepted)),
             ];
         }
 
@@ -254,8 +254,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 40,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Completed),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Completed),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Completed)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Completed)),
             ];
         }
 
@@ -264,8 +264,8 @@ class CstSecAdminChase extends Model
                 'client_product_id' => $this->prod_id,
                 'status_id' => 39,
                 'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', $this->Date_Proc_Fee_Paid),
-                'updated_at' => date('Y-m-d H:i:s', $this->Date_Proc_Fee_Paid),
+                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Proc_Fee_Paid)),
+                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Proc_Fee_Paid)),
             ];
         }
 

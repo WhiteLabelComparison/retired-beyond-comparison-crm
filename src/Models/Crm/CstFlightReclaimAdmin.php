@@ -115,7 +115,7 @@ class CstFlightReclaimAdmin extends Model
         if($this->ppi_Referred_FOS_date != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 33, //todo add id
+                'status_id' => 33,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Referred_FOS_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Referred_FOS_date)),
