@@ -78,7 +78,7 @@ class CstFlightReclaimAdmin extends Model
         $statuses = [];
 
         $statuses[] = [
-            'lead_id' => $leadId,
+            'client_product_id' => $this->prod_id,
             'status_id' => 20,
             'user_id' => null,
             'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
@@ -87,7 +87,7 @@ class CstFlightReclaimAdmin extends Model
 
         if($this->ppi_Ltr_Authrty_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 23,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date)),
@@ -97,7 +97,7 @@ class CstFlightReclaimAdmin extends Model
 
         if($this->ppi_Ltr_Authrty_date_rec != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 24,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Ltr_Authrty_date_rec)),
@@ -108,7 +108,7 @@ class CstFlightReclaimAdmin extends Model
         // Claim Sent
         if($this->ppi_SAR_Sent_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 25,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_Sent_date)),
@@ -119,7 +119,7 @@ class CstFlightReclaimAdmin extends Model
         // Claim Acknowledged
         if($this->ppi_SAR_ack_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 26,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_SAR_ack_date)),
@@ -130,7 +130,7 @@ class CstFlightReclaimAdmin extends Model
         // Legal action taken
         if($this->ppi_Referred_FOS_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 33, //todo add id
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Referred_FOS_date)),
@@ -141,7 +141,7 @@ class CstFlightReclaimAdmin extends Model
         // Offer Made
         if($this->ppi_offer_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 57,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_offer_date)),
@@ -152,7 +152,7 @@ class CstFlightReclaimAdmin extends Model
         // Client got funds
         if($this->ppi_Funds_by_Client_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 36,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Funds_by_Client_date)),
@@ -163,7 +163,7 @@ class CstFlightReclaimAdmin extends Model
         // fee taken
         if($this->ppi_Date_Fee_Taken != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 38,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Date_Fee_Taken)),
@@ -173,7 +173,7 @@ class CstFlightReclaimAdmin extends Model
 
         if($this->ppi_Fee_received_date != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 37,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
@@ -181,7 +181,7 @@ class CstFlightReclaimAdmin extends Model
             ];
 
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 39,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),

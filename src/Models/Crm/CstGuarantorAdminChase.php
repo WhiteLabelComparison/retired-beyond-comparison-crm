@@ -104,7 +104,7 @@ class CstGuarantorAdminChase extends Model
         $statuses = [];
 
         $statuses[] = [
-            'lead_id' => $leadId,
+            'client_product_id' => $this->prod_id,
             'status_id' => 20,
             'user_id' => null,
             'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
@@ -113,7 +113,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_DIP != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 49,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_DIP),
@@ -123,7 +123,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Fee_Agreed != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 46,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Fee_Agreed),
@@ -144,7 +144,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_IDD != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 47,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_IDD),
@@ -154,7 +154,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_KFI != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 48,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_KFI),
@@ -164,7 +164,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_DPP != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 58,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_DPP),
@@ -185,7 +185,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Docs_Sent != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 50, //todo add real id
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Docs_Sent),
@@ -255,7 +255,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Full_App != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 51,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Full_App),
@@ -265,7 +265,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Solicitor_Instrd != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 53,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Solicitor_Instrd),
@@ -275,7 +275,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Survey_Instructed != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 54,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Survey_Instructed),
@@ -285,7 +285,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Suitability_Letter != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 55, //todo add real id
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Suitability_Letter),
@@ -295,7 +295,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Offer_Made != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 56,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Offer_Made),
@@ -305,7 +305,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Offer_Accepted != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 57,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Offer_Accepted),
@@ -315,7 +315,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Completed != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 57,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Completed),
@@ -325,7 +325,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Completed != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 40,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Broker_Fee_Paid),
@@ -335,7 +335,7 @@ class CstGuarantorAdminChase extends Model
 
         if($this->Date_Proc_Fee_Paid != '0000-00-00') {
             $statuses[] = [
-                'lead_id' => $leadId,
+                'client_product_id' => $this->prod_id,
                 'status_id' => 39,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', $this->Date_Proc_Fee_Paid),
