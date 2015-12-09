@@ -7,23 +7,7 @@ class CstFlightReclaimAdmin extends Model
 
     public $timestamp = false;
 
-    protected $dates = [
-        'ppi_Pack_Sent_date',
-        'ppi_Pack_Rtrnd_date',
-        'ppi_Engemnt_Signd_date',
-        'ppi_Qu_Completd_date',
-        'ppi_SAR_Sent_date',
-        'ppi_Referred_FOS_date',
-        'ppi_Funds_by_Client_date',
-        'ppi_Fee_received_date',
-        'ppi_Date_Fee_Taken',
-        'ppi_Engemnt_Signd_date_rec',
-        'ppi_Ltr_Authrty_date_rec',
-        'ppi_SAR_ack_date',
-        'ppi_FOS_ack_date',
-        'ppi_offer_date',
-        'ppi_cheque_date',
-    ];
+    protected $dates = [];
 
     protected $primaryKey = 'id';
 
