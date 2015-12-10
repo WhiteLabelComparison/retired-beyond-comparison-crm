@@ -21,14 +21,6 @@ class CstPpiAdmin extends Model
     {
         $statuses = [];
 
-        $statuses[] = [
-            'client_product_id' => $this->prod_id,
-            'status_id' => 20,
-            'user_id' => null,
-            'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-            'updated_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-        ];
-
         if($this->ppi_Pack_Sent_date != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
@@ -200,16 +192,6 @@ class CstPpiAdmin extends Model
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
-            ];
-        }
-
-        if($lastStatus == 14) {
-            $statuses[] = [
-                'client_product_id' => $this->prod_id,
-                'status_id' => 44,
-                'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ];
         }
 

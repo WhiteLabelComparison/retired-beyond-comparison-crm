@@ -17,17 +17,9 @@ class CstPensionAdminChase extends Model
 
     protected $fillable = [];
 
-    public function getStatuses($leadId, $createdDate = null)
+    public function getStatuses()
     {
-        return [
-            [
-                'client_product_id' => $this->prod_id,
-                'status_id' => 20,
-                'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-                'updated_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-            ],
-        ];
+        return [];
     }
 
 }
