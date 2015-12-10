@@ -57,7 +57,7 @@ class CstFlightReclaimAdmin extends Model
         'Lender_Outcome',
     ];
 
-    public function getStatuses($leadId, $createdDate = null)
+    public function getStatuses($finalStatus, $createdDate = null)
     {
         $statuses = [];
 
@@ -137,7 +137,7 @@ class CstFlightReclaimAdmin extends Model
         if($this->ppi_Funds_by_Client_date != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 36,
+                'status_id' => 38,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Funds_by_Client_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Funds_by_Client_date)),
@@ -148,7 +148,7 @@ class CstFlightReclaimAdmin extends Model
         if($this->ppi_Date_Fee_Taken != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 38,
+                'status_id' => 40,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Date_Fee_Taken)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Date_Fee_Taken)),
@@ -158,7 +158,7 @@ class CstFlightReclaimAdmin extends Model
         if($this->ppi_Fee_received_date != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 37,
+                'status_id' => 41,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
@@ -166,12 +166,14 @@ class CstFlightReclaimAdmin extends Model
 
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 39,
+                'status_id' => 42,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
             ];
         }
+
+
 
         return $statuses;
     }

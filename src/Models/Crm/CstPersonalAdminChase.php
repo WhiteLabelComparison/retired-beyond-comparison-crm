@@ -17,7 +17,7 @@ class CstPersonalAdminChase extends Model
 
     protected $fillable = [];
 
-    public function getStatuses($leadId, $createdDate = null)
+    public function getStatuses($lastStatus, $createdDate = null)
     {
         $statuses = [];
 
@@ -31,7 +31,8 @@ class CstPersonalAdminChase extends Model
 
         if($this->Date_DIP != '0000-00-00') {
             $statuses[] = [
-                'status_id' => 49,
+                'client_product_id' => $this->prod_id,
+                'status_id' => 51,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_DIP)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_DIP)),
@@ -41,13 +42,14 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Fee_Agreed != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 46,
+                'status_id' => 48,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Fee_Agreed)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Fee_Agreed)),
             ];
         }
 
+        // This is the same as the fee agreement
 //        if($this->Date_Irrevs != '0000-00-00') {
 //            $statuses[] = [
 //
@@ -61,7 +63,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_IDD != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => null, //todo add real id
+                'status_id' => 49,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_IDD)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_IDD)),
@@ -71,7 +73,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_KFI != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 48,
+                'status_id' => 50,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_KFI)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_KFI)),
@@ -81,13 +83,14 @@ class CstPersonalAdminChase extends Model
         if($this->Date_DPP != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => null, //todo add real id
+                'status_id' => 60,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_DPP)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_DPP)),
             ];
         }
 
+//      This is the same the DPP
 //        if($this->Date_Future_Relship != '0000-00-00') {
 //            $statuses[] = [
 //
@@ -101,23 +104,13 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Docs_Sent != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 50,
+                'status_id' => 52, //todo add real id
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Docs_Sent)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Docs_Sent)),
             ];
         }
 
-//        if($this->Date_Photo_ID != '0000-00-00') {
-//            $statuses[] = [
-//
-//                'status_id' => null, //todo add real id
-//                'user_id' => null,
-//                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Photo_ID)),
-//                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Photo_ID)),
-//            ];
-//        }
-//
 //        if($this->Date_Photo_ID != '0000-00-00') {
 //            $statuses[] = [
 //
@@ -158,7 +151,7 @@ class CstPersonalAdminChase extends Model
 //            ];
 //        }
 //
-//            if($this->Date_Mort_Rec != '0000-00-00') {
+//        if($this->Date_Mort_Rec != '0000-00-00') {
 //            $statuses[] = [
 //
 //                'status_id' => null, //todo add real id
@@ -167,7 +160,7 @@ class CstPersonalAdminChase extends Model
 //                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Mort_Rec)),
 //            ];
 //        }
-
+//
 //        if($this->Date_Pension_Statement != '0000-00-00') {
 //            $statuses[] = [
 //
@@ -181,17 +174,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Full_App != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 51,
-                'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
-                'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
-            ];
-        }
-
-        if($this->Date_Land_Reg != '0000-00-00') {
-            $statuses[] = [
-                'client_product_id' => $this->prod_id,
-                'status_id' => 52,
+                'status_id' => 53,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Full_App)),
@@ -201,7 +184,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Solicitor_Instrd != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 53,
+                'status_id' => 55,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Solicitor_Instrd)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Solicitor_Instrd)),
@@ -211,7 +194,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Survey_Instructed != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 54,
+                'status_id' => 56,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Survey_Instructed)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Survey_Instructed)),
@@ -221,7 +204,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Suitability_Letter != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 55,
+                'status_id' => 57,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Suitability_Letter)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Suitability_Letter)),
@@ -231,7 +214,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Offer_Made != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 56,
+                'status_id' => 58,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Made)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Made)),
@@ -241,7 +224,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Offer_Accepted != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 57,
+                'status_id' => 59,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Accepted)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Offer_Accepted)),
@@ -251,7 +234,7 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Completed != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 40,
+                'status_id' => 42,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Completed)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Completed)),
@@ -261,10 +244,20 @@ class CstPersonalAdminChase extends Model
         if($this->Date_Proc_Fee_Paid != '0000-00-00') {
             $statuses[] = [
                 'client_product_id' => $this->prod_id,
-                'status_id' => 39,
+                'status_id' => 41,
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Proc_Fee_Paid)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Proc_Fee_Paid)),
+            ];
+        }
+
+        if($lastStatus == 6) {
+            $statuses[] = [
+                'client_product_id' => $this->prod_id,
+                'status_id' => 44,
+                'user_id' => null,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
             ];
         }
 
