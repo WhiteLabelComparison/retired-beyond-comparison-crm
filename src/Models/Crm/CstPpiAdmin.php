@@ -17,7 +17,7 @@ class CstPpiAdmin extends Model
 
     protected $fillable = [];
 
-    public function getStatuses($lastStatus, $createdDate = null)
+    public function getStatuses()
     {
         $statuses = [];
 
