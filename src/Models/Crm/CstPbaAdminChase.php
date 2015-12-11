@@ -17,17 +17,9 @@ class CstPbaAdminChase extends Model
 
     protected $fillable = [];
 
-    public function getStatuses($lastStatus, $createdDate = null)
+    public function getStatuses()
     {
         $statuses = [];
-
-        $statuses[] = [
-            'client_product_id' => $this->prod_id,
-            'status_id' => 20,
-            'user_id' => null,
-            'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-            'updated_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-        ];
 
         if($this->pba_Pack_Sent_date != '0000-00-00') {
             $statuses[] = [
@@ -115,16 +107,6 @@ class CstPbaAdminChase extends Model
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->pba_comm_recd_date)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->pba_comm_recd_date)),
-            ];
-        }
-
-        if($lastStatus == 12) {
-            $statuses[] = [
-                'client_product_id' => $this->prod_id,
-                'status_id' => 44,
-                'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ];
         }
 

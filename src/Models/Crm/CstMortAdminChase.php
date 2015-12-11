@@ -75,17 +75,9 @@ class CstMortAdminChase extends Model
         'Mort_Chase_Notes',
     ];
 
-    public function getStatuses($lastStatus, $createdDate = null)
+    public function getStatuses()
     {
         $statuses = [];
-
-        $statuses[] = [
-            'client_product_id' => $this->prod_id,
-            'status_id' => 20,
-            'user_id' => null,
-            'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-            'updated_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-        ];
 
         if($this->Date_DIP != '0000-00-00') {
             $statuses[] = [
@@ -306,16 +298,6 @@ class CstMortAdminChase extends Model
                 'user_id' => null,
                 'created_at' => date('Y-m-d H:i:s', strtotime($this->Date_Proc_Fee_Paid)),
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->Date_Proc_Fee_Paid)),
-            ];
-        }
-
-        if($lastStatus == 6) {
-            $statuses[] = [
-                'client_product_id' => $this->prod_id,
-                'status_id' => 44,
-                'user_id' => null,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ];
         }
 

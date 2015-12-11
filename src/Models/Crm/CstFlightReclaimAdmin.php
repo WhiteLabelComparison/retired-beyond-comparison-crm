@@ -57,17 +57,9 @@ class CstFlightReclaimAdmin extends Model
         'Lender_Outcome',
     ];
 
-    public function getStatuses($finalStatus, $createdDate = null)
+    public function getStatuses()
     {
         $statuses = [];
-
-        $statuses[] = [
-            'client_product_id' => $this->prod_id,
-            'status_id' => 20,
-            'user_id' => null,
-            'created_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-            'updated_at' => date('Y-m-d H:i:s', strtotime($createdDate)),
-        ];
 
         if($this->ppi_Ltr_Authrty_date != '0000-00-00') {
             $statuses[] = [
@@ -172,8 +164,6 @@ class CstFlightReclaimAdmin extends Model
                 'updated_at' => date('Y-m-d H:i:s', strtotime($this->ppi_Fee_received_date)),
             ];
         }
-
-
 
         return $statuses;
     }
