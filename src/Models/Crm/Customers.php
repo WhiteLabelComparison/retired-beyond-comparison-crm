@@ -21,13 +21,18 @@ class Customers extends Model
     public function lead()
     {
         $leads2 = Leads2::where('UserID', $this->cUserID)->first();
-        if(is_null($leads2)) {
+        if(!is_null($leads2)) {
             return $leads2;
         }
 
         $leadSurvey = LeadsSurvey::where('UserID', $this->cUserID)->first();
-        if(is_null($leadSurvey)) {
+        if(!is_null($leadSurvey)) {
             return $leadSurvey;
+        }
+
+        $flightLead = LeadsFlightReclaim::where('UserID', $this->cUserID)->first();
+        if(!is_null($flightLead)) {
+            return $flightLead;
         }
 
         return null;
