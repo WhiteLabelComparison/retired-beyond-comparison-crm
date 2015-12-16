@@ -32,5 +32,20 @@ class Leads2 extends Model
         return $this->belongsTo(AffiliateUser::class, 'Adviser', 'username');
     }
 
+    public function needsAndPreferences()
+    {
+        return $this->hasONe(CstLiNeedsPrefs::class, 'cUserID', 'UserID');
+    }
+
+    public function coverRequested()
+    {
+        return $this->hasOne(CstLiCoverReq::class, 'cUserID', 'UserID');
+    }
+
+    public function existingLifePolicy()
+    {
+        return $this->hasMany(CstExisLifePoliDet::class, 'cUserID', 'UserID');
+    }
+
 
 }
