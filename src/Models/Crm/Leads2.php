@@ -34,12 +34,12 @@ class Leads2 extends Model
 
     public function needsAndPreferences()
     {
-        return $this->hasONe(CstLiNeedsPrefs::class, 'cUserID', 'UserID');
+        return $this->hasOne(CstLiNeedsPrefs::class, 'UserID', 'cUserID');
     }
 
     public function coverRequested()
     {
-        return $this->hasOne(CstLiCoverReq::class, 'cUserID', 'UserID');
+        return $this->hasOne(CstLiCoverReq::class, 'UserID', 'cUserID');
     }
 
     public function existingLifePolicy()
