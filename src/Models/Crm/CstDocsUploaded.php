@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class CstDebtDet extends Model
+class CstDocsUploaded extends Model
 {
 
     public $timestamp = false;
@@ -23,5 +23,15 @@ class CstDebtDet extends Model
         'agent',
         'doc_type',
     ];
+    
+    public function client()
+    {
+        return $this->belongsTo(Customers::class, 'UserID', 'cUserID');
+    }
+
+    public function agent()
+    {
+        return $this->hasOne(AffiliateUser::class, 'id', 'agent');
+    }
 
 }
